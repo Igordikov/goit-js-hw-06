@@ -14,8 +14,8 @@ constructor (items) {
     removeItem(itemToRemove) {
         const findIndexToRemove = this.#items.indexOf(itemToRemove);
         if (findIndexToRemove !== -1) {
-            const removedItem = this.#items.splice(findIndexToRemove, 1)[0];
-            return removedItem;
+            return this.#items.splice(findIndexToRemove, 1)[0];
+            
         } 
     }}
         
