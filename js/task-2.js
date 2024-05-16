@@ -12,12 +12,14 @@ constructor (items) {
     }
 
     removeItem(itemToRemove) {
-    
-        const findIndex = this.#items.findIndex(item => item.name === itemToRemove);
-        if (findIndex !== -1) {
-          return this.#items.splice(findIndex, 1);
- 
-}}}
+        const findIndexToRemove = this.#items.indexOf(itemToRemove);
+        if (findIndexToRemove !== -1) {
+            const removedItem = this.#items.splice(findIndexToRemove, 1)[0];
+            return removedItem;
+        } 
+    }}
+        
+       
 
 
 
